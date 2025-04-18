@@ -110,20 +110,26 @@ permit_costs = st.number_input("Please enter the monthly permit costs for this v
 try:
     purchase_cost_per_month = initial_purchase_cost / (useful_life * 12)
     fuel_cost_per_month = (average_monthly_driven_miles / fuel_efficiency) * fuel_price
+    total_driver_wages_per_month = driver_wages * 4.33 * 50
+#purchase_cost_per_month = initial_purchase_cost / (useful_life * 12)
+#fuel_cost_per_month = (average_monthly_driven_miles / fuel_efficiency) * fuel_price
+    total_maintenance_cost_per_month = monthly_maintenance_cost
+    total_licensing_permits_cost_per_month = registration_fee + permit_costs
 
+    total_cost_of_owning_vehicle_per_month = total_driver_wages_per_month + purchase_cost_per_month + fuel_cost_per_month + total_maintenance_cost_per_month + total_licensing_permits_cost_per_month
 except ZeroDivisionError:
   
     st.error("An error occurred: Division by zero is not allowed.")
 except Exception as e:
     st.error(f"An unexpected error occurred: {e}")
 
-total_driver_wages_per_month = driver_wages * 4.33 * 50
+#total_driver_wages_per_month = driver_wages * 4.33 * 50
 #purchase_cost_per_month = initial_purchase_cost / (useful_life * 12)
 #fuel_cost_per_month = (average_monthly_driven_miles / fuel_efficiency) * fuel_price
-total_maintenance_cost_per_month = monthly_maintenance_cost
-total_licensing_permits_cost_per_month = registration_fee + permit_costs
+#total_maintenance_cost_per_month = monthly_maintenance_cost
+#total_licensing_permits_cost_per_month = registration_fee + permit_costs
 
-total_cost_of_owning_vehicle_per_month = total_driver_wages_per_month + purchase_cost_per_month + fuel_cost_per_month + total_maintenance_cost_per_month + total_licensing_permits_cost_per_month
+#total_cost_of_owning_vehicle_per_month = total_driver_wages_per_month + purchase_cost_per_month + fuel_cost_per_month + total_maintenance_cost_per_month + total_licensing_permits_cost_per_month
 
 st.write(f"The total driver wage costs per month is: ${total_driver_wages_per_month:.2f}\n")
 st.write(f"The total purchase cost per month is: ${purchase_cost_per_month:.2f}\n")
