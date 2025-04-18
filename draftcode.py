@@ -220,7 +220,7 @@ Cost_Threshold = (st.session_state.slider_val/10)* PercentPremium
 st.write("Cost Threshold is equal to ", f"{Cost_Threshold * 100:.2f}%")
 
 
-if (Current_Premium <= Cost_Threshold)
+if (Current_Premium <= Cost_Threshold):
     st.write("You should use your own vehicle because the percent premium you are paying is lower than the threshold percentage")
 # Define the slider
 #impact_slider = widgets.IntSlider(
