@@ -198,7 +198,18 @@ st.write("5 means that qualitative data and quantitative data are equally consid
 st.write("10 means that the qualitative data is absolutely considered when making the decision\n")
 
 
-slider_value = st.slider("Select a value", min_value = 0, max_value = 10, value = 1)
+if "slider_val" not in st.session_state:
+    st.session_state.slider_val = 5
+
+# Input widget
+new_val = st.slider("Select a value", min_value=0, max_value=10, value=st.session_state.slider_val, step=1)
+
+# Button to apply the update
+if st.button("Update"):
+    st.session_state.slider_val = new_val
+
+# Display the updated value
+st.write("Current selected value:", st.session_state.slider_val)
 
 # Define the slider
 #impact_slider = widgets.IntSlider(
