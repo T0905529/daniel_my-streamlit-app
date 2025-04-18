@@ -147,7 +147,7 @@ st.write(f"The dollar per mile calculation is: ${dollar_per_mile_calculation:.2f
 
 #while True:
 #  try:
-third_party_delivery_costs = st.number_input("Please enter the dollar per mile cost of a 3rd party delivery method: ")
+third_party_delivery_costs = st.number_input("Please enter the dollar per mile cost of a 3rd party delivery method: ", value = 3.54)
 #    if third_party_delivery_costs > 0:
  #     break
 #    else:
