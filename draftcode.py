@@ -115,6 +115,7 @@ except ZeroDivisionError:
   
     st.error("An error occurred: Division by zero is not allowed.")
 except Exception as e:
+    st.error(f"An unexpected error occurred: {e}")
 
 total_driver_wages_per_month = driver_wages * 4.33 * 50
 #purchase_cost_per_month = initial_purchase_cost / (useful_life * 12)
