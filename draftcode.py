@@ -192,6 +192,8 @@ third_party_delivery_costs = st.number_input("Please enter the dollar per mile c
 #import ipywidgets as widgets
 #from IPython.display import display
 
+PercentPremium = st.number_input("Please enter the percent premium that the company is willing to pay: ", value = 0.20)
+
 st.write("Please select whether to consider the qualitative results in the analysis\n")
 st.write("0 means that qualitative data will not be considered when making the decision\n")
 st.write("5 means that you are willing to pay 50% of the percent premium\n")
