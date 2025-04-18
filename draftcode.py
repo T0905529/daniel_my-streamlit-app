@@ -48,7 +48,7 @@ useful_life = st.number_input("Please enter the number of years the vehicle has 
 #Fuel Costs:
 #while True:
 #  try:
-average_monthly_driven_miles = st.number_input("Please enter the number of miles that this vehicle drives per month: ", 2625)
+average_monthly_driven_miles = st.number_input("Please enter the number of miles that this vehicle drives per month: ", value = 2625)
 #    if average_monthly_driven_miles > 0:
 #      break
 #    else:
