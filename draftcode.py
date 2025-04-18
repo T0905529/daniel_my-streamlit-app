@@ -66,7 +66,7 @@ fuel_efficiency = st.number_input("Please enter the fuel efficiency of this vehi
 #    print("Invalid input. Please enter a valid number. ")
 #while True:
 #  try:
-fuel_price = st.number_input("Please enter the fuel price per gallon at this current moment: ", value 3.52)
+fuel_price = st.number_input("Please enter the fuel price per gallon at this current moment: ", value = 3.52)
 #    if fuel_price > 0:
 #      break
 #    else:
