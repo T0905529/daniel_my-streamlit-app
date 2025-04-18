@@ -198,7 +198,7 @@ st.write("1 means that qualitative data and quantitative data are equally consid
 st.write("2 means that only qualitative data is considered when making the decision\n")
 
 
-slider_value = st.slider("Select a value", min_value = 0, max_value = 2, value = 0.2)
+slider_value = st.slider("Select a value", min_value = 0, max_value = 10, value = 1)
 
 # Define the slider
 #impact_slider = widgets.IntSlider(
