@@ -107,9 +107,18 @@ permit_costs = st.number_input("Please enter the monthly permit costs for this v
 #    print("Invalid input. Please enter a valid number. ")
 
 #Calculations
+try:
+    purchase_cost_per_month = initial_purchase_cost / (useful_life * 12)
+    fuel_cost_per_month = (average_monthly_driven_miles / fuel_efficiency) * fuel_price
+
+except ZeroDivisionError:
+  
+    st.error("An error occurred: Division by zero is not allowed.")
+except Exception as e:
+
 total_driver_wages_per_month = driver_wages * 4.33 * 50
-purchase_cost_per_month = initial_purchase_cost / (useful_life * 12)
-fuel_cost_per_month = (average_monthly_driven_miles / fuel_efficiency) * fuel_price
+#purchase_cost_per_month = initial_purchase_cost / (useful_life * 12)
+#fuel_cost_per_month = (average_monthly_driven_miles / fuel_efficiency) * fuel_price
 total_maintenance_cost_per_month = monthly_maintenance_cost
 total_licensing_permits_cost_per_month = registration_fee + permit_costs
 
