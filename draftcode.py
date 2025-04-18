@@ -227,7 +227,7 @@ if (Current_Premium <= Cost_Threshold):
     st.write("You should use your own vehicle because the percent premium you are paying per mile is", f"${Current_Premium_Value:.2f}\n")
     st.write ("which is lower than the threshold cost per mile of", f"${New:.2f}")
 
-else 
+else:
     st.write("You should use the third party delivery because the percent premium you are paying per mile is", f"${Current_Premium_Value:.2f}\n")
     st.write ("which is greater than the threshold cost per mile of", f"${New:.2f}")
 # Define the slider
