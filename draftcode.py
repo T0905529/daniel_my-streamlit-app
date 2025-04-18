@@ -221,8 +221,10 @@ st.write("Cost Threshold is equal to ", f"{Cost_Threshold * 100:.2f}%")
 
 Current_Premium_Value = dollar_per_mile_calculation - third_party_delivery_costs
 
+New = Cost_Threshold * dollar_per_mile_calculation
+
 if (Current_Premium <= Cost_Threshold):
-    st.write("You should use your own vehicle because the percent premium you are paying is", f"${Current_Premium_Value:.2f}", "lower than the threshold percentage")
+    st.write("You should use your own vehicle because the percent premium you are paying is", f"${Current_Premium_Value:.2f}", "lower than the threshold cost of", f"${New:.2f}")
 # Define the slider
 #impact_slider = widgets.IntSlider(
   #  value=1,
