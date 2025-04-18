@@ -18,7 +18,7 @@ print("Industrial Service Solutions ")
 #Operational Costs
 #while True:
 #  try:
-driver_wages = st.number_input("Please enter your driver wages per hour: ")
+driver_wages = st.number_input("Please enter your driver wages per hour: ", value = 24)
 #    if driver_wages > 0:
 #      break
  #   else:
@@ -29,7 +29,7 @@ driver_wages = st.number_input("Please enter your driver wages per hour: ")
 #Purchase Costs
 #while True:
 #  try:
-initial_purchase_cost = st.number_input("Please enter the intiial purchase cost of the vehicle: ")
+initial_purchase_cost = st.number_input("Please enter the initial purchase cost of the vehicle: ", value = 60,000)
  #   if initial_purchase_cost > 0:
  #     break
  #   else:
@@ -38,7 +38,7 @@ initial_purchase_cost = st.number_input("Please enter the intiial purchase cost 
 #    print("Invalid input. Please enter a valid number. ")
 #while True:
 #  try:
-useful_life = st.number_input("Please enter the number of years the vehicle has been in use: ", value = 1)
+useful_life = st.number_input("Please enter the number of years the vehicle has been in use: ", value = 20)
 #    if useful_life > 0:
 #      break
 #    else:
@@ -48,7 +48,7 @@ useful_life = st.number_input("Please enter the number of years the vehicle has 
 #Fuel Costs:
 #while True:
 #  try:
-average_monthly_driven_miles = st.number_input("Please enter the number of miles that this vehicle drives per month: ", 1)
+average_monthly_driven_miles = st.number_input("Please enter the number of miles that this vehicle drives per month: ", 2625)
 #    if average_monthly_driven_miles > 0:
 #      break
 #    else:
@@ -57,7 +57,7 @@ average_monthly_driven_miles = st.number_input("Please enter the number of miles
 #    print("Invalid input. Please enter a valid number. ")
 # while True:
 #  try:
-fuel_efficiency = st.number_input("Please enter the fuel efficiency of this vehicle in miles per gallon: ", value = 1)
+fuel_efficiency = st.number_input("Please enter the fuel efficiency of this vehicle in miles per gallon: ", value = 8.8)
 #    if fuel_efficiency > 0:
 #      break
 #    else:
@@ -66,7 +66,7 @@ fuel_efficiency = st.number_input("Please enter the fuel efficiency of this vehi
 #    print("Invalid input. Please enter a valid number. ")
 #while True:
 #  try:
-fuel_price = st.number_input("Please enter the fuel price per gallon at this current moment: ")
+fuel_price = st.number_input("Please enter the fuel price per gallon at this current moment: ", value 3.52)
 #    if fuel_price > 0:
 #      break
 #    else:
@@ -77,7 +77,7 @@ fuel_price = st.number_input("Please enter the fuel price per gallon at this cur
 #Maintenance Costs
 #while True:
  # try:
-monthly_maintenance_cost = st.number_input("Please enter the monthly maintenance cost of this vehicle: ")
+monthly_maintenance_cost = st.number_input("Please enter the monthly maintenance cost of this vehicle: ", value = 1000)
 #    if monthly_maintenance_cost > 0:
  #     break
 #    else:
@@ -88,7 +88,7 @@ monthly_maintenance_cost = st.number_input("Please enter the monthly maintenance
 #Licensing Permits
 #while True:
 #  try:
-registration_fee = st.number_input("Please enter the monthly registration fee for this vehicle: ")
+registration_fee = st.number_input("Please enter the monthly registration fee for this vehicle: ", value = 91.67)
  #   if registration_fee > 0:
  #     break
 #    else:
@@ -98,7 +98,7 @@ registration_fee = st.number_input("Please enter the monthly registration fee fo
 
 #while True:
 #  try:
-permit_costs = st.number_input("Please enter the monthly permit costs for this vehicle: ")
+permit_costs = st.number_input("Please enter the monthly permit costs for this vehicle: ", value = 80)
 #    if permit_costs > 0:
 #      break
 #    else:
