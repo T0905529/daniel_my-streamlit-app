@@ -38,7 +38,7 @@ initial_purchase_cost = st.number_input("Please enter the intiial purchase cost 
 #    print("Invalid input. Please enter a valid number. ")
 #while True:
 #  try:
-useful_life = st.number_input("Please enter the number of years the vehicle has been in use: ")
+useful_life = st.number_input("Please enter the number of years the vehicle has been in use: ", value = 1)
 #    if useful_life > 0:
 #      break
 #    else:
@@ -57,7 +57,7 @@ average_monthly_driven_miles = st.number_input("Please enter the number of miles
 #    print("Invalid input. Please enter a valid number. ")
 # while True:
 #  try:
-fuel_efficiency = st.number_input("Please enter the fuel efficiency of this vehicle in miles per gallon: ")
+fuel_efficiency = st.number_input("Please enter the fuel efficiency of this vehicle in miles per gallon: ", value = 1)
 #    if fuel_efficiency > 0:
 #      break
 #    else:
