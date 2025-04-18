@@ -194,8 +194,8 @@ third_party_delivery_costs = st.number_input("Please enter the dollar per mile c
 
 st.write("Please select whether to consider the qualitative results in the analysis\n")
 st.write("0 means that qualitative data will not be considered when making the decision\n")
-st.write("1 means that qualitative data and quantitative data are equally considered when recommending the decision\n")
-st.write("2 means that only qualitative data is considered when making the decision\n")
+st.write("5 means that qualitative data and quantitative data are equally considered when recommending the decision\n")
+st.write("10 means that the qualitative data is absolutely considered when making the decision\n")
 
 
 slider_value = st.slider("Select a value", min_value = 0, max_value = 10, value = 1)
