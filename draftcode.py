@@ -10,102 +10,102 @@ Original file is located at
 import numpy as np
 import matplotlib.pyplot as plt
 !pip install streamlit
+import streamlit as st
 
 
-
-print("This is the Total Cost of Ownership for a 2005 Columbia Freightliner\n")
+st.title("This is the Total Cost of Ownership for a 2005 Columbia Freightliner\n")
 print("Industrial Service Solutions ")
 
 #Operational Costs
-while True:
-  try:
-    driver_wages = float(input("Please enter your driver wages per hour: "))
-    if driver_wages > 0:
-      break
-    else:
-      print("Invalid input. Please enter a wage that is greater than 0.")
-  except ValueError:
-    print("Invalid input. Please enter a valid number. ")
+#while True:
+#  try:
+    driver_wages = st.number_input("Please enter your driver wages per hour: ")
+#    if driver_wages > 0:
+#      break
+ #   else:
+#      print("Invalid input. Please enter a wage that is greater than 0.")
+#  except ValueError:
+#    print("Invalid input. Please enter a valid number. ")
 
 #Purchase Costs
-while True:
-  try:
-    initial_purchase_cost = float(input("Please enter the intiial purchase cost of the vehicle: "))
-    if initial_purchase_cost > 0:
-      break
-    else:
-      print("Invalid input. Please enter an initial purchase cost that is greater than 0.")
-  except ValueError:
-    print("Invalid input. Please enter a valid number. ")
-while True:
-  try:
-    useful_life = float(input("Please enter the number of years the vehicle has been in use: "))
-    if useful_life > 0:
-      break
-    else:
-      print("Invalid input. Please enter the correct number of years greater than 0.")
-  except ValueError:
-    print("Invalid input. Please enter a valid number. ")
+#while True:
+#  try:
+    initial_purchase_cost = st.number_input("Please enter the intiial purchase cost of the vehicle: ")
+ #   if initial_purchase_cost > 0:
+ #     break
+ #   else:
+  #    print("Invalid input. Please enter an initial purchase cost that is greater than 0.")
+#  except ValueError:
+#    print("Invalid input. Please enter a valid number. ")
+#while True:
+#  try:
+    useful_life = st.number_input("Please enter the number of years the vehicle has been in use: ")
+#    if useful_life > 0:
+#      break
+#    else:
+#      print("Invalid input. Please enter the correct number of years greater than 0.")
+#  except ValueError:
+#    print("Invalid input. Please enter a valid number. ")
 #Fuel Costs:
-while True:
-  try:
-    average_monthly_driven_miles = float(input("Please enter the number of miles that this vehicle drives per month: "))
-    if average_monthly_driven_miles > 0:
-      break
-    else:
-      print("Invalid input. Please enter the correct number of miles greater than 0.")
-  except ValueError:
-    print("Invalid input. Please enter a valid number. ")
-while True:
-  try:
-    fuel_efficiency = float(input("Please enter the fuel efficiency of this vehicle in miles per gallon: "))
-    if fuel_efficiency > 0:
-      break
-    else:
-      print("Invalid input. Please enter the correct fuel efficiency greater than 0.")
-  except ValueError:
-    print("Invalid input. Please enter a valid number. ")
-while True:
-  try:
-    fuel_price = float(input("Please enter the fuel price per gallon at this current moment: "))
-    if fuel_price > 0:
-      break
-    else:
-      print("Invalid input. Please enter the correct fuel price greater than 0.")
-  except:
-    print("Invalid input. Please enter a valid number. ")
+#while True:
+#  try:
+    average_monthly_driven_miles = st.number_input("Please enter the number of miles that this vehicle drives per month: ")
+#    if average_monthly_driven_miles > 0:
+#      break
+#    else:
+#      print("Invalid input. Please enter the correct number of miles greater than 0.")
+#  except ValueError:
+#    print("Invalid input. Please enter a valid number. ")
+# while True:
+#  try:
+    fuel_efficiency = st.number_input("Please enter the fuel efficiency of this vehicle in miles per gallon: ")
+#    if fuel_efficiency > 0:
+#      break
+#    else:
+#      print("Invalid input. Please enter the correct fuel efficiency greater than 0.")
+#  except ValueError:
+#    print("Invalid input. Please enter a valid number. ")
+#while True:
+#  try:
+    fuel_price = st.number_input("Please enter the fuel price per gallon at this current moment: ")
+#    if fuel_price > 0:
+#      break
+#    else:
+#      print("Invalid input. Please enter the correct fuel price greater than 0.")
+#  except:
+#    print("Invalid input. Please enter a valid number. ")
 
 #Maintenance Costs
-while True:
-  try:
-    monthly_maintenance_cost = float(input("Please enter the monthly maintenance cost of this vehicle: "))
-    if monthly_maintenance_cost > 0:
-      break
-    else:
-      print("Invalid input. Please enter the correct maintenance cost greater than 0.")
-  except ValueError:
-    print("Invalid input. Please enter a valid number. ")
+#while True:
+ # try:
+    monthly_maintenance_cost = st_number_input("Please enter the monthly maintenance cost of this vehicle: ")
+#    if monthly_maintenance_cost > 0:
+ #     break
+#    else:
+ #     print("Invalid input. Please enter the correct maintenance cost greater than 0.")
+#  except ValueError:
+#    print("Invalid input. Please enter a valid number. ")
 
 #Licensing Permits
-while True:
-  try:
-    registration_fee = float(input("Please enter the monthly registration fee for this vehicle: "))
-    if registration_fee > 0:
-      break
-    else:
-      print("Invalid input. Please enter the correct registration fee greater than 0.")
-  except ValueError:
-    print("Invalid input. Please enter a valid number. ")
+#while True:
+#  try:
+    registration_fee = st.number_input("Please enter the monthly registration fee for this vehicle: ")
+ #   if registration_fee > 0:
+ #     break
+#    else:
+#      print("Invalid input. Please enter the correct registration fee greater than 0.")
+#  except ValueError:
+#    print("Invalid input. Please enter a valid number. ")
 
-while True:
-  try:
-    permit_costs = float(input("Please enter the monthly permit costs for this vehicle: "))
-    if permit_costs > 0:
-      break
-    else:
-      print("Invalid input. Please enter the correct permit costs greater than 0.")
-  except ValueError:
-    print("Invalid input. Please enter a valid number. ")
+#while True:
+#  try:
+    permit_costs = st.number_input("Please enter the monthly permit costs for this vehicle: ")
+#    if permit_costs > 0:
+#      break
+#    else:
+#      print("Invalid input. Please enter the correct permit costs greater than 0.")
+#  except ValueError:
+#    print("Invalid input. Please enter a valid number. ")
 
 #Calculations
 total_driver_wages_per_month = driver_wages * 4.33 * 50
@@ -116,30 +116,30 @@ total_licensing_permits_cost_per_month = registration_fee + permit_costs
 
 total_cost_of_owning_vehicle_per_month = total_driver_wages_per_month + purchase_cost_per_month + fuel_cost_per_month + total_maintenance_cost_per_month + total_licensing_permits_cost_per_month
 
-print(f"The total driver wage costs per month is: ${total_driver_wages_per_month:.2f}\n")
-print(f"The total purchase cost per month is: ${purchase_cost_per_month:.2f}\n")
-print(f"The total fuel cost per month is: ${fuel_cost_per_month:.2f}\n")
-print(f"The total maintenance cost per month is: ${total_maintenance_cost_per_month:.2f}\n")
-print(f"The total licensing and permits cost per month is: ${total_licensing_permits_cost_per_month:.2f}\n")
+st.write(f"The total driver wage costs per month is: ${total_driver_wages_per_month:.2f}\n")
+st.write(f"The total purchase cost per month is: ${purchase_cost_per_month:.2f}\n")
+st.write(f"The total fuel cost per month is: ${fuel_cost_per_month:.2f}\n")
+st.write(f"The total maintenance cost per month is: ${total_maintenance_cost_per_month:.2f}\n")
+st.write(f"The total licensing and permits cost per month is: ${total_licensing_permits_cost_per_month:.2f}\n")
 
-print(f"The total cost of owning the vehicle per month is: ${total_cost_of_owning_vehicle_per_month:.2f}\n")
+st.write(f"The total cost of owning the vehicle per month is: ${total_cost_of_owning_vehicle_per_month:.2f}\n")
 
 dollar_per_mile_calculation = (total_driver_wages_per_month/average_monthly_driven_miles) + (purchase_cost_per_month/average_monthly_driven_miles) + (fuel_cost_per_month/average_monthly_driven_miles) + (total_maintenance_cost_per_month/average_monthly_driven_miles) + (total_licensing_permits_cost_per_month/average_monthly_driven_miles)
 
-print(f"The dollar per mile calculation is: ${dollar_per_mile_calculation:.2f}\n")
+st.write(f"The dollar per mile calculation is: ${dollar_per_mile_calculation:.2f}\n")
 
 #3rd party delivery costs
 
-while True:
-  try:
-    third_party_delivery_costs = float(input("Please enter the dollar per mile cost of a 3rd party delivery method: "))
-    if third_party_delivery_costs > 0:
-      break
-    else:
-      print("Invalid input. Please enter a value greater than 0.")
-  except ValueError:
-    print("Invalid input. Please enter a valid number. ")
-
+#while True:
+#  try:
+    third_party_delivery_costs = st.number_input("Please enter the dollar per mile cost of a 3rd party delivery method: "))
+#    if third_party_delivery_costs > 0:
+ #     break
+#    else:
+  #    print("Invalid input. Please enter a value greater than 0.")
+ # except ValueError:
+#    print("Invalid input. Please enter a valid number. ")
+#
 import ipywidgets as widgets
 from IPython.display import display
 
@@ -177,10 +177,10 @@ display(impact_slider, impact_label)
 import ipywidgets as widgets
 from IPython.display import display
 
-print ("Please select whether to consider the qualitative results in the analysis\n")
-print("0 means that qualitative data will not be considered when making the decision\n")
-print("1 means that qualitative data and quantitative data are equally considered when recommending the decision\n")
-print("2 means that only qualitative data is considered when making the decision\n")
+st.write("Please select whether to consider the qualitative results in the analysis\n")
+st.write("0 means that qualitative data will not be considered when making the decision\n")
+st.write("1 means that qualitative data and quantitative data are equally considered when recommending the decision\n")
+st.write("2 means that only qualitative data is considered when making the decision\n")
 
 # Define the slider
 impact_slider = widgets.IntSlider(
