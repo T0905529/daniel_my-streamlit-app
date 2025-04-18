@@ -77,7 +77,7 @@ fuel_price = st.number_input("Please enter the fuel price per gallon at this cur
 #Maintenance Costs
 #while True:
  # try:
-monthly_maintenance_cost = st_number_input("Please enter the monthly maintenance cost of this vehicle: ")
+monthly_maintenance_cost = st.number_input("Please enter the monthly maintenance cost of this vehicle: ")
 #    if monthly_maintenance_cost > 0:
  #     break
 #    else:
