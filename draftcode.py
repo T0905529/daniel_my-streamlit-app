@@ -213,6 +213,12 @@ if st.button("Update"):
 # Display the updated value
 st.write("Current selected value:", st.session_state.slider_val)
 
+Current_Premium = (dollar_per_mile_calculation - third_party_delivery_costs)/dollar_per_mile_calculation
+st.write("Current Premium is equal to ", Current_Premium)
+
+Cost_Threshold = (st.session_state.slider_val/10)* PercentPremium
+st.write("Cost Threshold is equal to ", Cost_Threshold)
+
 # Define the slider
 #impact_slider = widgets.IntSlider(
   #  value=1,
