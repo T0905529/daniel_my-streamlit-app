@@ -194,8 +194,8 @@ third_party_delivery_costs = st.number_input("Please enter the dollar per mile c
 
 st.write("Please select whether to consider the qualitative results in the analysis\n")
 st.write("0 means that qualitative data will not be considered when making the decision\n")
-st.write("5 means that qualitative data and quantitative data are equally considered when recommending the decision\n")
-st.write("10 means that the qualitative data is absolutely considered when making the decision\n")
+st.write("5 means that you are willing to pay 50% of the percent premium\n")
+st.write("10 means that you are willing to pay the percent premium\n")
 
 
 if "slider_val" not in st.session_state:
