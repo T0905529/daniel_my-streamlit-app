@@ -29,7 +29,7 @@ driver_wages = st.number_input("Please enter your driver wages per hour: ", valu
 #Purchase Costs
 #while True:
 #  try:
-initial_purchase_cost = st.number_input("Please enter the initial purchase cost of the vehicle: ", value = 60,000)
+initial_purchase_cost = st.number_input("Please enter the initial purchase cost of the vehicle: ", value = 60000)
  #   if initial_purchase_cost > 0:
  #     break
  #   else:
