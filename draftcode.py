@@ -9,7 +9,7 @@ Original file is located at
 
 import numpy as np
 import matplotlib.pyplot as plt
-!pip install streamlit
+
 import streamlit as st
 
 
