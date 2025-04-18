@@ -139,42 +139,42 @@ third_party_delivery_costs = st.number_input("Please enter the dollar per mile c
  # except ValueError:
 #    print("Invalid input. Please enter a valid number. ")
 #
-import ipywidgets as widgets
-from IPython.display import display
+#import ipywidgets as widgets
+#from IPython.display import display
 
 # Define the slider
-impact_slider = widgets.IntSlider(
-    value=1,
-    min=0,
-    max=2,
-    step=1,
-    description='Impact:',
-    style={'description_width': 'initial'}
-)
+#impact_slider = widgets.IntSlider(
+#    value=1,
+#    min=0,
+#    max=2,
+#    step=1,
+#    description='Impact:',
+#    style={'description_width': 'initial'}
+#)
 
 # Define the label
-impact_label = widgets.Label()
+#impact_label = widgets.Label()
 
 # Update function
-def update_label(change):
-    levels = {
-        0: "No Impact",
-        1: "Medium Impact",
-        2: "High Impact"
-    }
-    impact_label.value = f"Qualitative Impact: {levels[impact_slider.value]} ({impact_slider.value})"
+#def update_label(change):
+#   levels = {
+ #       0: "No Impact",
+  #      1: "Medium Impact",
+#       2: "High Impact"
+ #   }
+#    impact_label.value = f"Qualitative Impact: {levels[impact_slider.value]} ({impact_slider.value})"
 
 # Connect the slider to the update function
-impact_slider.observe(update_label, names='value')
+#impact_slider.observe(update_label, names='value')
 
 # Initial label update
-update_label(None)
+#update_label(None)
 
 # Display the slider and label
-display(impact_slider, impact_label)
+#display(impact_slider, impact_label)
 
-import ipywidgets as widgets
-from IPython.display import display
+#import ipywidgets as widgets
+#from IPython.display import display
 
 st.write("Please select whether to consider the qualitative results in the analysis\n")
 st.write("0 means that qualitative data will not be considered when making the decision\n")
@@ -182,48 +182,48 @@ st.write("1 means that qualitative data and quantitative data are equally consid
 st.write("2 means that only qualitative data is considered when making the decision\n")
 
 # Define the slider
-impact_slider = widgets.IntSlider(
-    value=1,
-    min=0,
-    max=2,
-    step=1,
-    description='Impact:',
-    style={'description_width': 'initial'}
-)
+#impact_slider = widgets.IntSlider(
+  #  value=1,
+ #   min=0,
+#    max=2,
+ #   step=1,
+ #   description='Impact:',
+ #  style={'description_width': 'initial'}
+#)
 
 # Define the label to show the result
-impact_label = widgets.Label()
+#impact_label = widgets.Label()
 
 # Button to confirm or update the selection
-update_button = widgets.Button(description="Update Selection")
+#update_button = widgets.Button(description="Update Selection")
 
 # Store the last value (initially none)
-last_value = None
+#last_value = None
 
 # Function that calculates costs based on slider value
-def calculate_costs(value):
-    if value == 0:
-        return "No impact on costs."
-    elif value == 1:
-        return "Medium impact on costs."
-    elif value == 2:
-        return "High impact on costs."
+#def calculate_costs(value):
+#    if value == 0:
+ #       return "No impact on costs."
+#    elif value == 1:
+#        return "Medium impact on costs."
+#    elif value == 2:
+#        return "High impact on costs."
 
 # Function to handle button click and show result
-def on_button_click(b):
-    global last_value
-    if last_value != impact_slider.value:
-        last_value = impact_slider.value  # Update the last confirmed value
-        result = calculate_costs(last_value)
-        impact_label.value = f"Qualitative Impact: {result}"
-    else:
-        impact_label.value = f"Qualitative Impact: No change made."
-
+#def on_button_click(b):
+#    global last_value
+ #   if last_value != impact_slider.value:
+#        last_value = impact_slider.value  # Update the last confirmed value
+   #     result = calculate_costs(last_value)
+   #     impact_label.value = f"Qualitative Impact: {result}"
+  #  else:
+ #       impact_label.value = f"Qualitative Impact: No change made."
+#
 # Attach the button click function to the button
-update_button.on_click(on_button_click)
+#update_button.on_click(on_button_click)
 
 # Display the slider, update button, and result label
-display(impact_slider, update_button, impact_label)
+#display(impact_slider, update_button, impact_label)
 
 
 
