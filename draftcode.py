@@ -270,8 +270,10 @@ if (Current_Premium <= Cost_Threshold):
         unsafe_allow_html=True
     )
 else:
-    st.write("**Recommendation:** You should use the third-party delivery because the percent premium you are paying per mile is **${:.2f}**.".format(Current_Premium_Value))
-    st.write(f"This is greater than the threshold cost per mile of **${New:.2f}**.")
+    st.markdown(
+        f"<p><strong>Recommendation:</strong> You should use the third-party delivery because the percent premium you are paying per mile is <strong>${Current_Premium_Value:.2f}</strong>, which is higher than the threshold cost per mile of <strong>${New:.2f}</strong>.</p>",
+        unsafe_allow_html=True
+    )
 # Define the slider
 #impact_slider = widgets.IntSlider(
   #  value=1,
