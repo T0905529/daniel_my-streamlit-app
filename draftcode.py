@@ -14,22 +14,7 @@ import streamlit as st
 
 st.title("This is the Total Cost of Ownership for a 2005 Columbia Freightliner\n")
 print("Industrial Service Solutions ")
-st.markdown(
-    """
-    <style>
-    .top-right-logo {
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        z-index: 1000;  /* Make sure the logo stays on top */
-    }
-    </style>
-    <div class="top-right-logo">
-        <img src="https://mma.prnewswire.com/media/2409166/ISS_Logo.jpg?p=facebook" width="50">
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+st.image("https://mma.prnewswire.com/media/2409166/ISS_Logo.jpg?p=facebook" width = 200)
 #Operational Costs
 #while True:
 #  try:
