@@ -19,7 +19,7 @@ import streamlit as st
 st.markdown(
     """
     <h1 style="display: inline;">This is the Total Cost of Ownership for a 2005 Columbia Freightliner</h1>
-    <img src="https://mma.prnewswire.com/media/2409166/ISS_Logo.jpg?p=facebook" width="100" style="vertical-align: middle; margin-left: 10px;">
+    <img src="https://mma.prnewswire.com/media/2409166/ISS_Logo.jpg?p=facebook" width="250" style="vertical-align: middle; margin-left: 10px;">
     """,
     unsafe_allow_html=True
 )
