@@ -25,7 +25,7 @@ st.markdown(
     }
     </style>
     <div class="top-right-logo">
-        <img src="https://mma.prnewswire.com/media/2409166/ISS_Logo.jpg?p=facebook" width="100">
+        <img src="https://mma.prnewswire.com/media/2409166/ISS_Logo.jpg?p=facebook" width="50">
     </div>
     """,
     unsafe_allow_html=True
