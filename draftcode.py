@@ -7,6 +7,7 @@
 
 import pandas as pd
 import streamlit as st
+import matplotlib.pyplot as plt
 
 
 #st.title("This is the Total Cost of Ownership for a 2005 Columbia Freightliner\n")
