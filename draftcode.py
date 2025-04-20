@@ -134,12 +134,13 @@ columns = ['Total Driver Wage Costs Per Month', 'Total Purchase Costs Per Month'
 costs = [total_driver_wages_per_month, purchase_cost_per_month, fuel_cost_per_month, total_maintenance_cost_per_month,total_licensing_permits_cost_per_month, total_cost_of_owning_vehicle_per_month ]
 df = pd.DataFrame({'Type of Costs': columns, 'Costs': costs})
 df['Costs'] = df['Costs'].apply(lambda x: f"${x:,.2f}")
+df_sorted = df.sort_values(by = 'Costs', ascending=False)
 
 def highlight_total(row):
     return ['font-weight: bold' if row['Type of Costs'] == 'Total Costs Per Month' else '' for _ in row]
 styled_df = df.style.apply(highlight_total, axis = 1)    
 st.write('### Monthly Cost Quantitative Breakdown')
-st.dataframe(styled_df)
+st.dataframe(df_sorted)
 
 #st.write(f"The total driver wage costs per month is: ${total_driver_wages_per_month:.2f}\n")
 #st.write(f"The total purchase cost per month is: ${purchase_cost_per_month:.2f}\n")
