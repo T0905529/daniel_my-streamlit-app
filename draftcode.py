@@ -251,67 +251,37 @@ st.markdown("### Recommendations to ISS")
 #New = Cost_Threshold * dollar_per_mile_calculation
 
 #if (Current_Premium <= Cost_Threshold):
-#    st.write("You should use your own vehicle because the percent premium you are paying per mile is", f"${Current_Premium_Value:.2f}\n")
-#    st.write ("which is lower than the threshold cost per mile of", f"${New:.2f}")
+ #   st.write("You should use your own vehicle because the percent premium you are paying per mile is", f"${Current_Premium_Value:.2f}\n")
+ #   st.write ("which is lower than the threshold cost per mile of", f"${New:.2f}")
 
 #else:
-#    st.write("You should use the third party delivery because the percent premium you are paying per mile is", f"${Current_Premium_Value:.2f}\n")
-#    st.write ("which is greater than the threshold cost per mile of", f"${New:.2f}")
+  #  st.write("You should use the third party delivery because the percent premium you are paying per mile is", f"${Current_Premium_Value:.2f}\n")
+ #   st.write ("which is greater than the threshold cost per mile of", f"${New:.2f}")
     
-#Current_Premium = (dollar_per_mile_calculation - third_party_delivery_costs) / dollar_per_mile_calculation
-#st.write("**Current Premium is equal to**", f"{Current_Premium * 100:.2f}%")
+Current_Premium = (dollar_per_mile_calculation - third_party_delivery_costs) / dollar_per_mile_calculation
+st.write("**Current Premium is equal to**", f"{Current_Premium * 100:.2f}%")
 
 # Cost Threshold Calculation
-#Cost_Threshold = (st.session_state.slider_val / 10) * PercentPremium
-#st.write("**Cost Threshold is equal to**", f"{Cost_Threshold * 100:.2f}%")
+Cost_Threshold = (st.session_state.slider_val / 10) * PercentPremium
+st.write("**Cost Threshold is equal to**", f"{Cost_Threshold * 100:.2f}%")
 
 # Current Premium Value and New Cost
-#Current_Premium_Value = dollar_per_mile_calculation - third_party_delivery_costs
-#New = Cost_Threshold * dollar_per_mile_calculation
+Current_Premium_Value = dollar_per_mile_calculation - third_party_delivery_costs
+New = Cost_Threshold * dollar_per_mile_calculation
 
 # Decision logic
-#if (Current_Premium <= Cost_Threshold):
- #   st.markdown(
-#        f"<p><strong>Recommendation:</strong> You should use your own vehicle because the percent premium you are paying per mile is <strong>${Current_Premium_Value:.2f}</strong>, which is lower than the threshold cost per mile of <strong>${New:.2f}</strong>.</p>",
-#        unsafe_allow_html=True
-#    )
-#else:
- #   st.markdown(
-  #      f"<p><strong>Recommendation:</strong> You should use the third-party delivery because the percent premium you are paying per mile is <strong>${Current_Premium_Value:.2f}</strong>, which is higher than the threshold cost per mile of <strong>${New:.2f}</strong>.</p>",
- #       unsafe_allow_html=True
- #   )
-
-st.markdown(
-    f"""
-    <div style="border: 2px solid #ccc; padding: 20px; border-radius: 10px; background-color: #f9f9f9; margin-bottom: 20px;">
-        <h3 style="margin-top: 0;">Recommendations to ISS</h3>
-        <p><strong>Current Premium is equal to:</strong> {Current_Premium * 100:.2f}%</p>
-        <p><strong>Cost Threshold is equal to:</strong> {Cost_Threshold * 100:.2f}%</p>
-    """,
-    unsafe_allow_html=True
-)
-
-# Decision and Final Output
-if Current_Premium <= Cost_Threshold:
+if (Current_Premium <= Cost_Threshold):
     st.markdown(
-        f"""
-        <p><strong>Recommendation:</strong> You should use your own vehicle because the percent premium you are paying per mile is 
-        <strong>${Current_Premium_Value:.2f}</strong>, which is lower than the threshold cost per mile of 
-        <strong>${New:.2f}</strong>.</p>
-        </div>
-        """,
+        f"<p><strong>Recommendation:</strong> You should use your own vehicle because the percent premium you are paying per mile is <strong>${Current_Premium_Value:.2f}</strong>, which is lower than the threshold cost per mile of <strong>${New:.2f}</strong>.</p>",
         unsafe_allow_html=True
     )
 else:
     st.markdown(
-        f"""
-        <p><strong>Recommendation:</strong> You should use the third-party delivery because the percent premium you are paying per mile is 
-        <strong>${Current_Premium_Value:.2f}</strong>, which is higher than the threshold cost per mile of 
-        <strong>${New:.2f}</strong>.</p>
-        </div>
-        """,
+        f"<p><strong>Recommendation:</strong> You should use the third-party delivery because the percent premium you are paying per mile is <strong>${Current_Premium_Value:.2f}</strong>, which is higher than the threshold cost per mile of <strong>${New:.2f}</strong>.</p>",
         unsafe_allow_html=True
     )
+
+
 # Define the slider
 #impact_slider = widgets.IntSlider(
   #  value=1,
