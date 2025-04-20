@@ -158,11 +158,36 @@ st.dataframe(styled_df)
 #st.write(f"The total cost of owning the vehicle per month is: ${total_cost_of_owning_vehicle_per_month:.2f}\n")
 
 dollar_per_mile_calculation = (total_driver_wages_per_month/average_monthly_driven_miles) + (purchase_cost_per_month/average_monthly_driven_miles) + (fuel_cost_per_month/average_monthly_driven_miles) + (total_maintenance_cost_per_month/average_monthly_driven_miles) + (total_licensing_permits_cost_per_month/average_monthly_driven_miles)
-if st.button("Show Histogram"):
-    df = pd.DataFrame({'Cost': costs}, index = columns)
-    st.bar_chart(df)
-else:
-    st.write("Click the button to display the cost breakdown as a histogram.")
+# Initialize toggle state
+if 'show_chart' not in st.session_state:
+    st.session_state.show_chart = False
+
+# Button to toggle chart
+if st.button("Show/Hide Cost Breakdown Chart"):
+    st.session_state.show_chart = not st.session_state.show_chart
+
+# Conditionally display chart
+if st.session_state.show_chart:
+    fig = go.Figure(data=[
+        go.Bar(
+            x=columns,
+            y=costs,
+            marker_color='indigo',
+            text=[f"${c:,.2f}" for c in costs],
+            textposition='auto'
+        )
+    ])
+
+    fig.update_layout(
+        title="Monthly Vehicle-Related Cost Breakdown",
+        xaxis_title="Cost Category",
+        yaxis_title="Amount ($)",
+        template="plotly_white",
+        xaxis_tickangle=-45,
+        margin=dict(l=20, r=20, t=50, b=80)
+    )
+
+    st.plotly_chart(fig, use_container_width=True)
 st.markdown(f"<p style='font-size: 30px;'><b>The dollar per mile calculation is: ${dollar_per_mile_calculation:.2f}</b></p>", unsafe_allow_html=True)
 
 #3rd party delivery costs
