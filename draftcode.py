@@ -25,7 +25,7 @@ st.markdown(
 )
 #while True:
 #  try:
-st.write("Detailed Cost Breakdown")
+st.write("**Detailed Cost Breakdown**")
 st.write("All of these values are initialized to account for initial data given by Industrial Service Solutions. Adjust if needed")
 driver_wages = st.number_input("Please enter your driver wages per hour: ", value = 24)
 #    if driver_wages > 0:
