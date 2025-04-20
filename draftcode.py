@@ -157,7 +157,15 @@ st.dataframe(styled_df)
 #st.write(f"The total cost of owning the vehicle per month is: ${total_cost_of_owning_vehicle_per_month:.2f}\n")
 
 dollar_per_mile_calculation = (total_driver_wages_per_month/average_monthly_driven_miles) + (purchase_cost_per_month/average_monthly_driven_miles) + (fuel_cost_per_month/average_monthly_driven_miles) + (total_maintenance_cost_per_month/average_monthly_driven_miles) + (total_licensing_permits_cost_per_month/average_monthly_driven_miles)
-
+if st.button("Show Histogram"):
+    fig, ax = plt.subplots()
+    ax.bar(columns, costs, color = 'cornflowerblue', edgecolor = 'black')
+    ax.set_title("Monthly Cost Breakdown")
+    ax.set_ylabel("Cost ($)")
+    ax.set_xticklabels(columns, rotation = 45, ha = "right")
+    st.pyplot(fig)
+else:
+    st.write("Click the button to display the cost breakdown.")
 st.markdown(f"<p style='font-size: 30px;'><b>The dollar per mile calculation is: ${dollar_per_mile_calculation:.2f}</b></p>", unsafe_allow_html=True)
 
 #3rd party delivery costs
