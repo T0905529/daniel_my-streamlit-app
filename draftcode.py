@@ -204,11 +204,18 @@ third_party_delivery_costs = st.number_input("Please enter the dollar per mile c
 
 PercentPremium = st.number_input("Please enter the percent premium that the company is willing to pay: ", value = 0.20)
 
-st.write("Please select whether to consider the qualitative results in the analysis\n")
-st.write("0 means that qualitative data will not be considered when making the decision\n")
-st.write("5 means that you are willing to pay 50% of the percent premium\n")
-st.write("10 means that you are willing to pay the percent premium\n")
+st.markdown("### Qualitative Data Consideration in Analysis")
 
+# Main text with explanations
+st.markdown("""
+Please select the level of consideration for the **qualitative results** in the analysis:
+
+- **0** means that qualitative data will **not** be considered when making the decision.
+- **5** means that you are willing to pay **50%** of the percent premium.
+- **10** means that you are willing to pay the full percent premium.
+
+Make your selection based on your willingness to factor in qualitative results alongside the quantitative data.
+""")
 
 if "slider_val" not in st.session_state:
     st.session_state.slider_val = 5
