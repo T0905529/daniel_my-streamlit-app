@@ -18,8 +18,10 @@ import streamlit as st
 #Operational Costs
 st.markdown(
     """
-    <h1 style="display: inline;">This is the Total Cost of Ownership for a 2005 Columbia Freightliner</h1>
-    <img src="https://mma.prnewswire.com/media/2409166/ISS_Logo.jpg?p=facebook" width="100" style="vertical-align: middle; margin-left: 10px;">
+    <div style="display: flex; align-items: center;">
+        <h1 style="margin-right: 10px;">This is the Total Cost of Ownership for a 2005 Columbia Freightliner</h1>
+        <img src="https://mma.prnewswire.com/media/2409166/ISS_Logo.jpg?p=facebook" width="100">
+    </div>
     """,
     unsafe_allow_html=True
 )
