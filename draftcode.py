@@ -7,7 +7,7 @@
 
 import pandas as pd
 import streamlit as st
-import matplotlib.pyplot as plt
+
 
 
 #st.title("This is the Total Cost of Ownership for a 2005 Columbia Freightliner\n")
@@ -159,14 +159,10 @@ st.dataframe(styled_df)
 
 dollar_per_mile_calculation = (total_driver_wages_per_month/average_monthly_driven_miles) + (purchase_cost_per_month/average_monthly_driven_miles) + (fuel_cost_per_month/average_monthly_driven_miles) + (total_maintenance_cost_per_month/average_monthly_driven_miles) + (total_licensing_permits_cost_per_month/average_monthly_driven_miles)
 if st.button("Show Histogram"):
-    fig, ax = plt.subplots()
-    ax.bar(columns, costs, color = 'cornflowerblue', edgecolor = 'black')
-    ax.set_title("Monthly Cost Breakdown")
-    ax.set_ylabel("Cost ($)")
-    ax.set_xticklabels(columns, rotation = 45, ha = "right")
-    st.pyplot(fig)
+    df = pd.DataFrame({'Cost': costs}, index = columns)
+    st.bar_chart(df)
 else:
-    st.write("Click the button to display the cost breakdown.")
+    st.write("Click the button to display the cost breakdown as a histogram.")
 st.markdown(f"<p style='font-size: 30px;'><b>The dollar per mile calculation is: ${dollar_per_mile_calculation:.2f}</b></p>", unsafe_allow_html=True)
 
 #3rd party delivery costs
