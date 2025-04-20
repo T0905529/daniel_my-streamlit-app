@@ -234,23 +234,42 @@ st.write("Current selected value:", st.session_state.slider_val)
 
 st.markdown("### Recommendations to ISS")
 
-Current_Premium = (dollar_per_mile_calculation - third_party_delivery_costs)/dollar_per_mile_calculation
-st.write("Current Premium is equal to ", f"{Current_Premium * 100:.2f}%")
+#Current_Premium = (dollar_per_mile_calculation - third_party_delivery_costs)/dollar_per_mile_calculation
+#st.write("Current Premium is equal to ", f"{Current_Premium * 100:.2f}%")
 
-Cost_Threshold = (st.session_state.slider_val/10)* PercentPremium
-st.write("Cost Threshold is equal to ", f"{Cost_Threshold * 100:.2f}%")
+#Cost_Threshold = (st.session_state.slider_val/10)* PercentPremium
+#st.write("Cost Threshold is equal to ", f"{Cost_Threshold * 100:.2f}%")
 
+#Current_Premium_Value = dollar_per_mile_calculation - third_party_delivery_costs
+
+#New = Cost_Threshold * dollar_per_mile_calculation
+
+#if (Current_Premium <= Cost_Threshold):
+#    st.write("You should use your own vehicle because the percent premium you are paying per mile is", f"${Current_Premium_Value:.2f}\n")
+#    st.write ("which is lower than the threshold cost per mile of", f"${New:.2f}")
+
+#else:
+#    st.write("You should use the third party delivery because the percent premium you are paying per mile is", f"${Current_Premium_Value:.2f}\n")
+#    st.write ("which is greater than the threshold cost per mile of", f"${New:.2f}")
+    
+Current_Premium = (dollar_per_mile_calculation - third_party_delivery_costs) / dollar_per_mile_calculation
+st.write("**Current Premium is equal to**", f"{Current_Premium * 100:.2f}%")
+
+# Cost Threshold Calculation
+Cost_Threshold = (st.session_state.slider_val / 10) * PercentPremium
+st.write("**Cost Threshold is equal to**", f"{Cost_Threshold * 100:.2f}%")
+
+# Current Premium Value and New Cost
 Current_Premium_Value = dollar_per_mile_calculation - third_party_delivery_costs
-
 New = Cost_Threshold * dollar_per_mile_calculation
 
+# Decision logic
 if (Current_Premium <= Cost_Threshold):
-    st.write("You should use your own vehicle because the percent premium you are paying per mile is", f"${Current_Premium_Value:.2f}\n")
-    st.write ("which is lower than the threshold cost per mile of", f"${New:.2f}")
-
+    st.write("**Recommendation:** You should use your own vehicle because the percent premium you are paying per mile is **${:.2f}**.".format(Current_Premium_Value))
+    st.write(f"This is lower than the threshold cost per mile of **${New:.2f}**.")
 else:
-    st.write("You should use the third party delivery because the percent premium you are paying per mile is", f"${Current_Premium_Value:.2f}\n")
-    st.write ("which is greater than the threshold cost per mile of", f"${New:.2f}")
+    st.write("**Recommendation:** You should use the third-party delivery because the percent premium you are paying per mile is **${:.2f}**.".format(Current_Premium_Value))
+    st.write(f"This is greater than the threshold cost per mile of **${New:.2f}**.")
 # Define the slider
 #impact_slider = widgets.IntSlider(
   #  value=1,
