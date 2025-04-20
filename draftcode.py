@@ -151,7 +151,7 @@ st.dataframe(styled_df)
 
 dollar_per_mile_calculation = (total_driver_wages_per_month/average_monthly_driven_miles) + (purchase_cost_per_month/average_monthly_driven_miles) + (fuel_cost_per_month/average_monthly_driven_miles) + (total_maintenance_cost_per_month/average_monthly_driven_miles) + (total_licensing_permits_cost_per_month/average_monthly_driven_miles)
 
-st.markdown("<p style = 'font-size: 30px; '><b>The dollar per mile calculation is: ${dollar_per_mile_calculation:.2f}\n </b></p>", unsafe_allow_html = True)
+st.markdown(f"<p style='font-size: 30px;'><b>The dollar per mile calculation is: ${dollar_per_mile_calculation:.2f}</b></p>", unsafe_allow_html=True)
 
 #3rd party delivery costs
 
