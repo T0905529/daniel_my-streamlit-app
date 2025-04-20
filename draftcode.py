@@ -130,7 +130,7 @@ except Exception as e:
 #total_licensing_permits_cost_per_month = registration_fee + permit_costs
 
 #total_cost_of_owning_vehicle_per_month = total_driver_wages_per_month + purchase_cost_per_month + fuel_cost_per_month + total_maintenance_cost_per_month + total_licensing_permits_cost_per_month
-columns = ['Total Driver Wage Costs Per Month', 'Total Purchase Costs Per Month', 'Total Fuel Costs Per Month','Total Maintenance Costs Per Month, 'Total Licensing/Permit Costs Per Month', 'Total Costs Per Month']
+columns = ['Total Driver Wage Costs Per Month', 'Total Purchase Costs Per Month', 'Total Fuel Costs Per Month','Total Maintenance Costs Per Month', 'Total Licensing/Permit Costs Per Month', 'Total Costs Per Month']
 costs = ["${total_driver_wages_per_month:.2f}\n", "${purchase_cost_per_month:.2f}\n", "${fuel_cost_per_month:.2f}\n", "${total_maintenance_cost_per_month:.2f}\n","${total_licensing_permits_cost_per_month:.2f}\n", "${total_cost_of_owning_vehicle_per_month:.2f}\n" ]
 df = pd.DataFrame({'Type of Costs': columns, 'Costs':costs})
 st.write('###Prices')
