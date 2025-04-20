@@ -105,6 +105,7 @@ registration_fee = st.number_input("Please enter the monthly registration fee fo
 #while True:
 #  try:
 permit_costs = st.number_input("Please enter the monthly permit costs for this vehicle: ", value = 80)
+st.divider()
 #    if permit_costs > 0:
 #      break
 #    else:
