@@ -4,7 +4,6 @@
 
 """
 
-pip install plotly
 import pandas as pd
 import streamlit as st
 import plotly.graph_objects as go
@@ -162,32 +161,14 @@ dollar_per_mile_calculation = (total_driver_wages_per_month/average_monthly_driv
 if 'show_chart' not in st.session_state:
     st.session_state.show_chart = False
 
-# Button to toggle chart
+# Toggle button
 if st.button("Show/Hide Cost Breakdown Chart"):
     st.session_state.show_chart = not st.session_state.show_chart
 
-# Conditionally display chart
+# Show chart if toggled
 if st.session_state.show_chart:
-    fig = go.Figure(data=[
-        go.Bar(
-            x=columns,
-            y=costs,
-            marker_color='indigo',
-            text=[f"${c:,.2f}" for c in costs],
-            textposition='auto'
-        )
-    ])
-
-    fig.update_layout(
-        title="Monthly Vehicle-Related Cost Breakdown",
-        xaxis_title="Cost Category",
-        yaxis_title="Amount ($)",
-        template="plotly_white",
-        xaxis_tickangle=-45,
-        margin=dict(l=20, r=20, t=50, b=80)
-    )
-
-    st.plotly_chart(fig, use_container_width=True)
+    df = pd.DataFrame({'Cost ($)': costs}, index=columns)
+    st.bar_chart(df)
 st.markdown(f"<p style='font-size: 30px;'><b>The dollar per mile calculation is: ${dollar_per_mile_calculation:.2f}</b></p>", unsafe_allow_html=True)
 
 #3rd party delivery costs
