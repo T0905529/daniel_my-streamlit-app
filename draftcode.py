@@ -134,16 +134,20 @@ columns = ['Total Driver Wage Costs Per Month', 'Total Purchase Costs Per Month'
 costs = [total_driver_wages_per_month, purchase_cost_per_month, fuel_cost_per_month, total_maintenance_cost_per_month,total_licensing_permits_cost_per_month, total_cost_of_owning_vehicle_per_month ]
 df = pd.DataFrame({'Type of Costs': columns, 'Costs': costs})
 df['Costs'] = df['Costs'].apply(lambda x: f"${x:,.2f}")
-st.write('###Prices')
-st.table(df)
 
-st.write(f"The total driver wage costs per month is: ${total_driver_wages_per_month:.2f}\n")
-st.write(f"The total purchase cost per month is: ${purchase_cost_per_month:.2f}\n")
-st.write(f"The total fuel cost per month is: ${fuel_cost_per_month:.2f}\n")
-st.write(f"The total maintenance cost per month is: ${total_maintenance_cost_per_month:.2f}\n")
-st.write(f"The total licensing and permits cost per month is: ${total_licensing_permits_cost_per_month:.2f}\n")
+def highlight_total(row):
+    return ['font-weight: bold' if row['Type of Costs'] == 'Total Costs Per Month' else '' for _ in row]
+styled_df = df.style.apply(highlight_total, axis = 1)    
+st.write('### Monthly Cost Quantitative Breakdown')
+st.dataframe(styled_df)
 
-st.write(f"The total cost of owning the vehicle per month is: ${total_cost_of_owning_vehicle_per_month:.2f}\n")
+#st.write(f"The total driver wage costs per month is: ${total_driver_wages_per_month:.2f}\n")
+#st.write(f"The total purchase cost per month is: ${purchase_cost_per_month:.2f}\n")
+#st.write(f"The total fuel cost per month is: ${fuel_cost_per_month:.2f}\n")
+#st.write(f"The total maintenance cost per month is: ${total_maintenance_cost_per_month:.2f}\n")
+#st.write(f"The total licensing and permits cost per month is: ${total_licensing_permits_cost_per_month:.2f}\n")
+
+#st.write(f"The total cost of owning the vehicle per month is: ${total_cost_of_owning_vehicle_per_month:.2f}\n")
 
 dollar_per_mile_calculation = (total_driver_wages_per_month/average_monthly_driven_miles) + (purchase_cost_per_month/average_monthly_driven_miles) + (fuel_cost_per_month/average_monthly_driven_miles) + (total_maintenance_cost_per_month/average_monthly_driven_miles) + (total_licensing_permits_cost_per_month/average_monthly_driven_miles)
 
