@@ -265,8 +265,9 @@ New = Cost_Threshold * dollar_per_mile_calculation
 
 # Decision logic
 if (Current_Premium <= Cost_Threshold):
-    st.write(
-        f"**Recommendation:** You should use your own vehicle because the percent premium you are paying per mile is **${Current_Premium_Value:.2f}**, which is lower than the threshold cost per mile of **${New:.2f}**."
+    st.markdown(
+        f"<p><strong>Recommendation:</strong> You should use your own vehicle because the percent premium you are paying per mile is <strong>${Current_Premium_Value:.2f}</strong>, which is lower than the threshold cost per mile of <strong>${New:.2f}</strong>.</p>",
+        unsafe_allow_html=True
     )
 else:
     st.write("**Recommendation:** You should use the third-party delivery because the percent premium you are paying per mile is **${:.2f}**.".format(Current_Premium_Value))
