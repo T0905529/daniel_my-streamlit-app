@@ -8,17 +8,7 @@ import pandas as pd
 import streamlit as st
 
 
-st.markdown(
-    """
-    <div style="
-        border:2px solid #333333;
-        border-radius:8px;
-        padding:16px;
-        margin:16px 0;
-    ">
-    """,
-    unsafe_allow_html=True,
-)
+
 #st.title("This is the Total Cost of Ownership for a 2005 Columbia Freightliner\n")
 
 #st.image("https://mma.prnewswire.com/media/2409166/ISS_Logo.jpg?p=facebook", width = 200)
@@ -31,7 +21,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.markdown("</div>", unsafe_allow_html=True)
+
 #while True:
 #  try:
 st.write("**Cost Inputs**")
