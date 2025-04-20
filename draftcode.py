@@ -210,7 +210,7 @@ third_party_delivery_costs = st.number_input("Please enter the dollar per mile c
 #import ipywidgets as widgets
 #from IPython.display import display
 
-PercentPremium = st.number_input("Please enter the percent premium that the company is willing to pay: ", value = 0.20)
+PercentPremium = st.number_input("Please enter the percent premium that the company is willing to pay as a decimal: ", value = 0.20)
 
 st.markdown("### Qualitative Data Consideration in Analysis")
 
