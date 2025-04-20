@@ -230,6 +230,9 @@ if st.button("Update"):
 # Display the updated value
 st.write("Current selected value:", st.session_state.slider_val)
 
+
+st.markdown("### Recommendations to ISS")
+
 Current_Premium = (dollar_per_mile_calculation - third_party_delivery_costs)/dollar_per_mile_calculation
 st.write("Current Premium is equal to ", f"{Current_Premium * 100:.2f}%")
 
