@@ -12,10 +12,17 @@ import pandas as pd
 import streamlit as st
 
 
-st.title("This is the Total Cost of Ownership for a 2005 Columbia Freightliner\n")
-print("Industrial Service Solutions ")
-st.image("https://mma.prnewswire.com/media/2409166/ISS_Logo.jpg?p=facebook", width = 200)
+#st.title("This is the Total Cost of Ownership for a 2005 Columbia Freightliner\n")
+
+#st.image("https://mma.prnewswire.com/media/2409166/ISS_Logo.jpg?p=facebook", width = 200)
 #Operational Costs
+st.markdown(
+    """
+    <h1 style="display: inline;">This is the Total Cost of Ownership for a 2005 Columbia Freightliner</h1>
+    <img src="https://mma.prnewswire.com/media/2409166/ISS_Logo.jpg?p=facebook" width="100" style="display: inline; vertical-align: middle;">
+    """,
+    unsafe_allow_html=True
+)
 #while True:
 #  try:
 driver_wages = st.number_input("Please enter your driver wages per hour: ", value = 24)
