@@ -286,11 +286,11 @@ st.markdown("### Recommendations to ISS")
  #   st.write ("which is greater than the threshold cost per mile of", f"${New:.2f}")
     
 Current_Premium = (dollar_per_mile_calculation - third_party_delivery_costs) / dollar_per_mile_calculation
-st.write("**Current Premium is equal to**", f"{Current_Premium * 100:.2f}%")
+#st.write("**Current Premium is equal to**", f"{Current_Premium * 100:.2f}%")
 
 # Cost Threshold Calculation
 Cost_Threshold = (st.session_state.slider_val / 10) * PercentPremium
-st.write("**Cost Threshold is equal to**", f"{Cost_Threshold * 100:.2f}%")
+#st.write("**Cost Threshold is equal to**", f"{Cost_Threshold * 100:.2f}%")
 
 # Current Premium Value and New Cost
 Current_Premium_Value = dollar_per_mile_calculation - third_party_delivery_costs
@@ -304,7 +304,7 @@ if (Current_Premium <= Cost_Threshold):
     )
 else:
     st.markdown(
-        f"<p><strong>Recommendation:</strong> You should use the third-party delivery because the percent premium you are paying per mile is <strong>${Current_Premium_Value:.2f}</strong>, which is higher than the threshold cost per mile of <strong>${New:.2f}</strong>.</p>",
+        f"<p><strong>Recommendation:</strong> You should use the third-party delivery because the premium you are paying per mile is <strong>${Current_Premium_Value:.2f}</strong>, which is higher than the threshold cost per mile of <strong>${New:.2f}</strong>.</p>",
         unsafe_allow_html=True
     )
 
