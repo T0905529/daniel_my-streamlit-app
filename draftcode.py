@@ -228,12 +228,11 @@ third_party_delivery_costs = st.number_input("Please enter the dollar per mile c
 st.markdown("""
 ### Enter Maximum Percent Premium
 
-This is the **highest extra amount (as a percentage)** your company is willing to pay for a product or service **when things like quality, brand, reliability, or service are most important to the customer**.
+This is the <b>highest extra amount (as a percentage)</b> your company is willing to pay for a product or service <b>when things like quality, brand, reliability, or service are most important to the customer</b>.
 
-
-💡 **Example:**  
-If a product usually costs $100, and you're okay paying up to $120 because it has better quality or service, that's a **20% premium** — so you'd enter **0.20** below.
-""")
+💡 <b>Example:</b><br>
+If a product usually costs $100, and you're okay paying up to $120 because it has better quality or service, that's a <b>20% premium</b> — so you'd enter <b>0.20</b> below.
+""", unsafe_allow_html=True)
 
 PercentPremium = st.number_input("Enter the percent premium as a decimal (e.g., 0.20 for 20%)", min_value=0.0, max_value=1.0, step=0.01)
 
