@@ -235,7 +235,8 @@ If a product usually costs $100, and you're okay paying up to $120 because it ha
 """)
 
 PercentPremium = st.number_input("Enter the percent premium as a decimal (e.g., 0.20 for 20%)", min_value=0.0, max_value=1.0, step=0.01)
-st.write("hi")
+
+
 st.markdown("### Qualitative Data Consideration in Analysis")
 
 # Main text with explanations
