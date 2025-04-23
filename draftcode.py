@@ -26,7 +26,7 @@ st.markdown(
 #  try:
 st.write("**Cost Inputs**")
 st.write("All of these values are initialized to account for initial data given by Industrial Service Solutions. Adjust if needed")
-driver_wages = st.number_input("Please enter your driver wages per hour: ", value = 24)
+driver_wages = st.number_input("Please enter your driver wages per hour (fully burdened, includes benefits) : ", value = 24)
 #    if driver_wages > 0:
 #      break
  #   else:
@@ -56,7 +56,7 @@ useful_life = st.number_input("Please enter the number of years the vehicle has 
 #Fuel Costs:
 #while True:
 #  try:
-average_monthly_driven_miles = st.number_input("Please enter the number of miles that this vehicle drives per month: ", value = 2625)
+average_monthly_driven_miles = st.number_input("Please enter the number of miles the vehicle is used per month: ", value = 2625)
 #    if average_monthly_driven_miles > 0:
 #      break
 #    else:
@@ -96,6 +96,7 @@ monthly_maintenance_cost = st.number_input("Please enter the monthly maintenance
 #Licensing Permits
 #while True:
 #  try:
+st.write("These are the insurance costs for the vehicle")
 registration_fee = st.number_input("Please enter the monthly registration fee for this vehicle: ", value = 91.67)
  #   if registration_fee > 0:
  #     break
