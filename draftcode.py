@@ -232,7 +232,7 @@ st.markdown("""
 This is the **maximum additional percentage** your company is willing to pay for a product or service when features like quality, reputation, or customer support are especially important.
 
 💡 **Example:**  
-If a product typically costs $100 and you're comfortable paying $120 because it offers better quality or reliability, that’s a **20% premium** — so you would enter **0.20** below.
+If a product typically costs 100 dollars and you're comfortable paying 120 dollars because it offers better quality or reliability, that’s a **20% premium** — so you would enter **0.20** below.
 """)
 
 PercentPremium = st.number_input("Enter the percent premium as a decimal (e.g., 0.20 for 20%)", min_value=0.0, max_value=1.0, step=0.01)
