@@ -235,7 +235,7 @@ This is the **maximum additional percentage** your company is willing to pay for
 If a product typically costs 100 dollars and you're comfortable paying 120 dollars because it offers better quality or reliability, that’s a **20% premium** — so you would enter **0.20** below.
 """)
 
-PercentPremium = st.number_input("Enter the percent premium as a decimal (e.g., 0.20 for 20%)", min_value=0.0, max_value=1.0, step=0.01)
+PercentPremium = st.number_input("Enter the percent premium as a decimal (e.g., 0.20 for 20%)", min_value=0.0, max_value=1.0, step=0.01, value = 0.20)
 
 
 st.markdown("### Qualitative Data Consideration in Analysis")
